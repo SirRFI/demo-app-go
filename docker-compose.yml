@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    database:
+        image: mariadb:10.10.2
+        environment:
+            MARIADB_DATABASE: demo-app
+            MARIADB_ROOT_PASSWORD: openSesame
+        ports:
+          - "3306:3306"
+
+volumes:
+    db-data: # This creates a volume where the storage is stored in, preserving data between runs
